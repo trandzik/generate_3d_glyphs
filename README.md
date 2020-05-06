@@ -1,2 +1,3 @@
 # Generate 3D glyphs HDA
+![](https://trandzik.com/assets/images/5p5/h_text1.png)
 Rendering complex 3D texts (with bevelling and character offset) in real-time might be a problem in case you are using a framework that lacks such features. However you can use Houdini to pre-generate 3D glyphs, save them to disk (along with some useful data) and then load them on demand in real-time application. This gives you freedom to tweak bevelling and offset of characters without worrying about breaking geometry thanks to Houdini top-notch SOPs.
