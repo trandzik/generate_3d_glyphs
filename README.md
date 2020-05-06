@@ -1,2 +1,2 @@
 # Generate 3D glyphs HDA
-HDA designed for generation of 3D glyphs which could be used for real-time text rendering.
+Rendering complex 3D texts (with bevelling and character offset) in real-time might be a problem in case you are using a framework that lacks these features. However you can use Houdini to pre-generate 3D glyphs, save them to disk with some useful data and then load them on demand in real-time application.
