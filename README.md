@@ -28,4 +28,4 @@ Rendering complex 3D texts (with bevelling and character offset) in real-time mi
 
 With collision detection   |  Without collision detection
 :-------------------------:|:-------------------------:
-![](pic/with_collisions.jpg)  |  ![](pic/with_collisions.jpg)
+![](pic/with_collisions.jpg)  |  ![](pic/without_collisions.jpg)
