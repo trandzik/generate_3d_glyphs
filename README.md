@@ -22,4 +22,10 @@ Rendering complex 3D texts (with bevelling and character offset) in real-time mi
 - *geo_suffix_id* parameter sets suffix for each variation of output alembic files.
 - `metadata.json` contains width and height information that could be later used in real-time applications.
     - Each glyph is saved by its Unicode code point (integer representing the Unicode glyph). When developing real-time application, one could easily convert desired string to series of Unicode code points (for example using `ord()` function in Python) and load corresponding alembic file for each glyph. By utilizing width and height values, glyphs could be arranged one next to another (without unnecessary gaps).
-- When I was working on this HDA, Houdini 18 (featuring new Polybevel with collision detection) was not yet available. Therefore I have created some “fixes” to overcome common issues of geometry intersections when using bevelling. It wasn’t ideal, but it solved majority of problems and eventually worked quite good. These could be found in *Fixes tab*.
+- When I was working on this HDA, Houdini 18 (featuring new **Polybevel** with collision detection) was not yet available. Therefore I have created some “fixes” to overcome common issues of geometry intersections when using bevelling. It wasn’t ideal, but it solved majority of problems and eventually worked quite good. These could be found in *Fixes tab*.
+    - HDA is now updated to work with new **Polybevel** in Houdini 18, but these fixes are still used in order to lower bevelling collisions.
+    - **Polybevel** collision detection in Houdini 18 works great, but there might be a case when beveling is terminated too soon due to *Offset Front Colliding with Itself*. In such case it might be desirable to disable collision detection and let **Boolean** fix the geometry. See following pictures for comparison.
+
+With collision detection   |  Without collision detection
+:-------------------------:|:-------------------------:
+![](pic/with_collisions.jpg)  |  ![](pic/with_collisions.jpg)
